@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <button type="button" data-hook="login-link" class="btn btn-primary">Login</button>
+
+    <div data-hook="authenticated" style="display: none;">
+      <p>Logged in as: <strong data-hook="user-name"></strong></p>
+
+      <form data-hook="edit-file">
+        <div class="form-group">
+          <label for="user">User/Org</label>
+          <input name="user" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="repo">Repo</label>
+          <input name="repo" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="branch">Branch</label>
+          <input name="branch" value="gh-pages" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="path">File path</label>
+          <input name="path" value="TEST_FILE.md" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea name="content" class="form-control">Hello, world!</textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
